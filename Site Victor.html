@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>REEBOK CALÇADOS</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("Imagens/FUNDO.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* CABEÇALHO */
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+}
+
+header h1 {
+    color: white;
+    font-size: 35px;
+    text-shadow: 0 0 10px red;
+}
+
+header p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* PRODUTOS */
+
+.titulo {
+    text-align: center;
+    margin: 30px;
+}
+
+.container-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-produto {
+    background: white;
+    color: #333;
+    width: 250px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card-produto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 20px red;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+}
+
+.card-produto h3 {
+    margin: 10px;
+}
+
+.preco {
+    color: #e60026;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+/* BOTÃO */
+
+.btn-comprar {
+    background: #e60026;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-comprar:hover {
+    background: black;
+}
+
+/* CARRINHO */
+
+.carrinho {
+    text-align: center;
+    background: #e60026;
+    padding: 15px;
+    width: fit-content;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* TABELA */
+
+.secao-tabela {
+    background: white;
+    color: #333;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.secao-tabela h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #e60026;
+    color: white;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #111;
+    text-align: center;
+    padding: 25px;
+    color: white;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    .card-produto {
+        width: 90%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>👟 REEBOK CALÇADOS</h1>
+    <p>ESTILO, CONFORTO E QUALIDADE!</p>
+</header>
+
+<h2 class="titulo">🔥 NOSSOS PRODUTOS</h2>
+
+<div class="carrinho">
+    🛒 Carrinho: <span id="quantidade">0</span> produtos
+</div>
+
+<div class="container-produtos">
+
+    <div class="card-produto">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Nike Revolution">
+        <h3>NIKE REVOLUTION</h3>
+        <p>MASCULINO/FEMININO</p>
+        <p class="preco">R$ 279,00</p>
+        <button class="btn-comprar" onclick="comprar()">Comprar</button>
+    </div>
+
+    <div class="card-produto">
+        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400" alt="Nike Shox">
+        <h3>NIKE AIR MAX 1</h3>
+        <p>bolha</p>
+        <p class="preco">R$ 299,00</p>
+        <button class="btn-comprar" onclick="comprar()">Comprar</button>
+    </div>
+
+    <div class="card-produto">
+        <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?w=400" alt="Mizuno Wave">
+        <h3>NIKE JORDAM</h3>
+        <p>wave 4</p>
+        <p class="preco">R$ 699,99</p>
+        <button class="btn-comprar" onclick="comprar()">Comprar</button>
+    </div>
+
+    <div class="card-produto">
+        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=400" alt="Mizuno Prophecy">
+        <h3>NIKE AIR MAX 2</h3>
+        <p>bolha</p>
+        <p class="preco">R$ 350,00</p>
+        <button class="btn-comprar" onclick="comprar()">Comprar</button>
+    </div>
+
+    <div class="card-produto">
+        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400" alt="Nike Vapor Max">
+        <h3>CASUAL PUMA</h3>
+        <p>puma</p>
+        <p class="preco">R$ 480,00</p>
+        <button class="btn-comprar" onclick="comprar()">Comprar</button>
+    </div>
+
+    <div class="card-produto">
+        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=400" alt="Nike Air Max">
+        <h3>NIKE JORDAM</h3>
+        <p>vermelho e branco</p>
+        <p class="preco">R$ 590,00</p>
+        <button class="btn-comprar" onclick="comprar()">Comprar</button>
+    </div>
+
+    <div class="card-produto">
+        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=400" alt="Tênis Lacoste">
+        <h3>TÊNIS VANS</h3>
+        <p>MODELO CASUAL</p>
+        <p class="preco">R$ 290,00</p>
+        <button class="btn-comprar" onclick="comprar()">Comprar</button>
+    </div>
+
+    <div class="card-produto">
+        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400" alt="Tênis casual">
+        <h3>TÊNIS NIKE AIR FORCE 1</h3>
+        <p>MODELO CASUAL</p>
+        <p class="preco">R$ 400,00</p>
+        <button class="btn-comprar" onclick="comprar()">Comprar</button>
+    </div>
+
+</div>
+
+<!-- TABELA DE ENTREGA -->
+
+<div class="secao-tabela">
+
+    <h2>🚚 SIMULAÇÃO DE ENVIO E PRAZOS</h2>
+
+    <table>
+        <tr>
+            <th>CATEGORIA</th>
+            <th>PRAZO</th>
+            <th>FRETE</th>
+        </tr>
+
+        <tr>
+            <td>NIKE</td>
+            <td>7 a 10 dias úteis</td>
+            <td>R$ 16,00</td>
+        </tr>
+
+        <tr>
+            <td>PUMA</td>
+            <td>4 a 6 dias úteis</td>
+            <td>R$ 20,00</td>
+        </tr>
+
+        <tr>
+            <td>OUTRAS MARCAS</td>
+            <td>3 a 5 dias úteis</td>
+            <td>R$ 30,00</td>
+        </tr>
+    </table>
+
+</div>
+
+<footer>
+    <p>© 2026 - REEBOK CALÇADOS</p>
+    <p>TODOS OS DIREITOS RESERVADOS.</p>
+</footer>
+
+<script>
+
+let quantidade = 0;
+
+function comprar() {
+    quantidade++;
+
+    document.getElementById("quantidade").innerText = quantidade;
+
+    alert("Produto adicionado ao carrinho! 🛒");
+}
+
+</script>
+
+</body>
+</html>
